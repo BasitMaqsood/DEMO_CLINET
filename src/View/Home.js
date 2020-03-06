@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => ({
     transform: "scale(0.8)"
   },
   title: {
-    fontSize: 20
+    fontSize: 20,
   },
   pos: {
     marginBottom: 12
@@ -37,7 +37,7 @@ const useStyles = makeStyles(theme => ({
 
 const defaultProps = {
   bgcolor: "white",
-  borderColor: "#ff5252",
+  borderColor: "#e75b6d",
   m: 4,
   border: 3,
   padding: 0.5,
@@ -50,11 +50,12 @@ export default function CenteredGrid() {
   return (
     <Container maxWidth="lg">
       <div className={classes.root}>
-        <Grid container spacing={3}>
-          <Grid item xs={6} sm={9} md={9}>
+        <Grid container spacing={3} direction="row"
+  justify="center">
+          <Grid item xs={12} sm={12} md={8} lg={8}>
             <Paper className={classes.paper}> Video</Paper>
           </Grid>
-          <Grid item xs={6} sm={3} md={3}>
+          <Grid item xs={12} sm={8} md={4} lg={4}>
             <Box width="100%">
               <Card
                 className={classes.root}
@@ -82,18 +83,17 @@ export default function CenteredGrid() {
                     <Grid item xs={12}>
                       <Typography
                         className={classes.title}
-                        variant="h6"
-                        fontWeight="fontWeightBold"
-                        gutterBottom
-                      >
-                        Vivek Rana
+                        variant="h4">
+                          <Box fontWeight={540}>
+                            Vivek Rana
+                          </Box>
                       </Typography>
                     </Grid>
                     <Grid item xs={12}>
                       <Typography
                         className={classes.title}
                         color="textSecondary"
-                        gutterBottom
+                        
                       >
                         India. Joined Oct 2013
                       </Typography>
@@ -116,8 +116,14 @@ export default function CenteredGrid() {
                     </Grid>
                     <Grid item xs={10}>
                       <Typography className={classes.title}>
-                        <Box textAlign="left" m={1}>
+                        <Box textAlign="left" m={1}  fontWeight="fontWeightBold">
                           108 <br />
+                        </Box>
+                      </Typography>
+                      <Typography className={classes.title} 
+                        color="textSecondary"
+                        >
+                        <Box textAlign="left" m={1}>
                           Jobes Done
                         </Box>
                       </Typography>
@@ -138,8 +144,12 @@ export default function CenteredGrid() {
                     </Grid>
                     <Grid item xs={10}>
                       <Typography className={classes.title}>
+                        <Box textAlign="left" m={1}  fontWeight="fontWeightBold">
+                          100 % (72/72)
+                        </Box>
+                      </Typography>
+                      <Typography className={classes.title} color="textSecondary">
                         <Box textAlign="left" m={1}>
-                          100 % (72/72) <br />
                           Recommended
                         </Box>
                       </Typography>
@@ -161,8 +171,12 @@ export default function CenteredGrid() {
                     </Grid>
                     <Grid item xs={10}>
                       <Typography className={classes.title}>
+                        <Box textAlign="left" m={1}  fontWeight="fontWeightBold">
+                          12
+                        </Box>
+                      </Typography>
+                      <Typography className={classes.title} color="textSecondary">
                         <Box textAlign="left" m={1}>
-                          12 <br />
                           Repeat Clients
                         </Box>
                         <Divider variant="fullWidth" orientation="horizontal" />
