@@ -198,11 +198,12 @@ export default function CenteredGrid() {
                     // size="large"
                     fullWidth
                     raised
+                    style={{ margin: 20,padding: 10 }}
                   >
                     <Typography
                       variant="h6"
                       component="h2"
-                      style={{ color: "	#FFFFFF" }}
+                      style={{ color: "	#FFFFFF",}}
                     >
                       Contact Me
                     </Typography>
